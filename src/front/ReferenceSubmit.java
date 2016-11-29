@@ -46,7 +46,6 @@ public class ReferenceSubmit extends JPanel {
 	public ReferenceSubmit() {
 		// TODO Auto-generated constructor stub
 		setLayout(new GridLayout(1, 3, 5, 5));
-
 		jButtonSubmit.addActionListener(new ActionListener() {
 
 			@Override
@@ -56,7 +55,7 @@ public class ReferenceSubmit extends JPanel {
 				setAuthor(((JTextField) (getAuthor().getjComponent())).getText());
 				setLocation1(((JTextField) (getLocation1().getjComponent())).getText());
 				setPageStart(PageStartAndEnd.getjTextField1().getText());
-				setPageEnd(PageStartAndEnd.getjTextField1().getText());
+				setPageEnd(PageStartAndEnd.getjTextField2().getText());
 				setResponsibility(((JTextField) (getResponsibility().getjComponent())).getText());
 				setTitle(((JTextField) (getTitle().getjComponent())).getText());
 				setYear(((JTextField) (getYear().getjComponent())).getText());
@@ -76,6 +75,7 @@ public class ReferenceSubmit extends JPanel {
 				((JTextField)(getTitle().getjComponent())).setText("");
 				((JTextField)(getYear().getjComponent())).setText("");
 				setLabelText("");
+				ReferenceGenerate.setNum(1);
 			}
 		});
 		jButtonSendToFile.addActionListener(new ActionListener() {
