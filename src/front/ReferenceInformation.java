@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import back.ReferenceDate;
+import back.ReferenceData;
 
 /**
  * @author wtupc96
@@ -30,6 +30,30 @@ public class ReferenceInformation extends JPanel {
 	private static RepetitiveComponent type, author, responsibility, title, location, year;
 	private static PageStartAndEnd pageStartAndEnd;
 
+	public static RepetitiveComponent getAuthor() {
+		return author;
+	}
+
+	public static RepetitiveComponent getResponsibility() {
+		return responsibility;
+	}
+
+	public static RepetitiveComponent getTitle() {
+		return title;
+	}
+
+	public static RepetitiveComponent getLocation1() {
+		return location;
+	}
+
+	public static RepetitiveComponent getYear() {
+		return year;
+	}
+
+	public static PageStartAndEnd getPageStartAndEnd() {
+		return pageStartAndEnd;
+	}
+
 	public static int getItemChosen() {
 		return itemChosen;
 	}
@@ -40,7 +64,7 @@ public class ReferenceInformation extends JPanel {
 
 	public ReferenceInformation() {
 		// TODO Auto-generated constructor stub
-		jComboBox = new JComboBox<String>(ReferenceDate.getNamech());
+		jComboBox = new JComboBox<String>(ReferenceData.getNamech());
 		jComboBox.addActionListener(new ActionListener() {
 
 			@Override
@@ -76,6 +100,22 @@ public class ReferenceInformation extends JPanel {
 		private static final long serialVersionUID = 3471552148355994701L;
 		private static JTextField jTextField1 = new JTextField(), jTextField2 = new JTextField();
 		private static JLabel jLabel = new JLabel("页码"), jLabel2 = new JLabel("-");
+
+		public static void setjTextField1(JTextField jTextField1) {
+			PageStartAndEnd.jTextField1 = jTextField1;
+		}
+
+		public static void setjTextField2(JTextField jTextField2) {
+			PageStartAndEnd.jTextField2 = jTextField2;
+		}
+
+		public static JTextField getjTextField1() {
+			return jTextField1;
+		}
+
+		public static JTextField getjTextField2() {
+			return jTextField2;
+		}
 
 		public PageStartAndEnd() {
 			// TODO Auto-generated constructor stub
